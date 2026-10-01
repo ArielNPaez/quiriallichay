@@ -1,15 +1,15 @@
-         .gradient-bg {
+.gradient-bg {
             background: linear-gradient(135deg, #7C1C80 0%, #4A0E4E 100%);
         }
-        .gradient-text {
+.gradient-text {
             background: linear-gradient(135deg, #7C1C80 0%, #A129AC 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .soft-shadow {
-            box-shadow: 0 10px 30px -5px rgba(124, 28, 128, 0.08);
-        }
-        .glass-card {
+         }
+.soft-shadow {
+    box-shadow: 0 10px 30px -5px rgba(124, 28, 128, 0.08);
+}
+.glass-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-        }
+}

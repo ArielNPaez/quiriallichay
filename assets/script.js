@@ -1,29 +1,3 @@
-         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#fcf4fd',
-                            100: '#f8e6fa',
-                            200: '#f0cbf5',
-                            300: '#e5a1ed',
-                            400: '#d56de0',
-                            500: '#bf3ecd',
-                            600: '#a129ac',
-                            700: '#84208d',
-                            800: '#6f1d75',
-                            900: '#5c1d60',
-                            primary: '#7C1C80', // Logo Purple Color
-                            dark: '#521255',
-                            light: '#FAF5fb'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
                 // Mobile Menu Navigation Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
