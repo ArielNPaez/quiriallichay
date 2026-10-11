@@ -47,10 +47,11 @@
             background: linear-gradient(135deg, #7C1C80 0%, #4A0E4E 100%);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #7C1C80 0%, #A129AC 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+           background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+           -webkit-background-clip: text; /* Compatible con Chrome, Safari y navegadores antiguos */
+           background-clip: text;         /* Propiedad estándar actual */
+          -webkit-text-fill-color: transparent;
+}
         .soft-shadow {
             box-shadow: 0 10px 30px -5px rgba(124, 28, 128, 0.08);
         }
@@ -70,7 +71,7 @@
                         <!-- REEMPLAZA "logo.png" POR LA RUTA O NOMBRE DE TU ARCHIVO DE LOGO                          -->
                         <!-- Puedes modificar la altura con clases como: h-14, h-16, h-20 o style="height: 70px;"     -->
                         <!-- ========================================================================================= -->
-                        <img src="logo.png" alt="Fundación Quiri Allichay" class="h-16 md:h-20 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/220x80/7C1C80/ffffff?text=Quiri+Allichay';">
+                        <img src="./assets/logo.png" alt="Fundación Quiri Allichay" class="h-16 md:h-20 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/220x80/7C1C80/ffffff?text=Quiri+Allichay';">
                     </div>
                 </a>
 
@@ -172,7 +173,7 @@
                                     <!-- ========================================================================= -->
                                     <!-- SEGUNDO ESPACIO DE LOGO SECUNDARIO / TARJETA                              -->
                                     <!-- ========================================================================= -->
-                                    <img src="logo.png" alt="Quiri Allichay" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/7C1C80/ffffff?text=QA';">
+                                    <img src="./assets/logo-favicon.png" alt="Quiri Allichay" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/7C1C80/ffffff?text=QA';">
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-bold text-gray-900">Significado Quechua</h3>
