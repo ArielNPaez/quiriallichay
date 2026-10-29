@@ -217,26 +217,54 @@
         </div>
     </section>
 
-    <!-- NUESTRA HISTORIA -->
-    <section id="historia" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-700 font-bold tracking-wider uppercase text-xs px-3 py-1 bg-purple-50 rounded-full border border-purple-100">Sobre Nosotros</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3">Nuestra Historia y Propósito QUIRI ALLICHAY </h2>
-                <p class="text-gray-600 mt-2 text-lg">Fundación Quiri Allichay nace de una mirada cercana sobre nuestra comunidad y de una pregunta sencilla: ¿qué pasaría si cada persona que quiere salir adelante tuviera una oportunidad real para hacerlo?  
-​En muchos lugares de Tucumán y del Norte Argentino existen jóvenes, principalmente mujeres, trabajadores y familias con enormes capacidades, ideas y voluntad de progresar, pero que muchas veces encuentran en situaciones de vulnerabilidad y dificultades para acceder a capacitación, herramientas, orientación o recursos que les permitan construir un futuro mejor.  
-​Quiri Allichay surge para acompañar ese camino.  
-​La Fundación fue pensada como un espacio donde la capacitación se transforme en oportunidades concretas, donde aprender un oficio pueda significar conseguir trabajo, donde una idea pueda convertirse en un emprendimiento y donde una comunidad organizada pueda encontrar nuevas formas de crecer.  
-​Nuestro propósito es acercar conocimientos, generar vínculos, impulsar proyectos sociales, productivos y culturales, promover el empleo y acompañar a quienes necesitan una oportunidad para comenzar nuevamente o avanzar.  
-​El nombre Quiri Allichay simboliza precisamente ese espíritu: sanar, mejorar, reparar, reconstruir y volver a ponerse de pie.  
-​Desde Tucumán, pero con una mirada puesta en todo el Norte Argentino, queremos construir una institución capaz de unir personas, empresas, organismos públicos y organizaciones sociales y culturales alrededor de un objetivo común: generar oportunidades que produzcan cambios reales y duraderos.  
-​Porque creemos que ayudar no es solamente asistir.
-Es enseñar.
-Es acompañar.
-Es abrir puertas.
-Y, sobre todo, es brindar herramientas para que cada persona pueda construir su propio camino.</p>
-            </div>
+ <!-- Sección Nuestra Historia -->
+<section id="historia" class="py-16 px-6 max-w-4xl mx-auto">
+  
+  <!-- Título con efecto de máquina de escribir -->
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 min-h-[2.5rem] flex items-center">
+    <span id="typing-title"></span>
+    <span class="animate-pulse ml-1 text-emerald-600 font-bold">|</span>
+  </h2>
 
+  <!-- Texto largo con animación de entrada (Fade In al cargar/scrollear) -->
+  <div id="history-text" class="space-y-4 text-gray-600 text-lg leading-relaxed opacity-0 translate-y-4 transition-all duration-1000 ease-out">
+    <p>
+        Fundación Quiri Allichay nace de una mirada cercana sobre nuestra comunidad y de una pregunta sencilla: ¿qué pasaría si cada persona que quiere salir adelante tuviera una oportunidad real para hacerlo?  
+    <p>
+        En muchos lugares de Tucumán y del Norte Argentino existen jóvenes, principalmente mujeres, trabajadores y familias con enormes capacidades, ideas y voluntad de progresar, pero que muchas veces encuentran en situaciones de vulnerabilidad y dificultades para acceder a capacitación, herramientas, orientación o recursos que les permitan construir un futuro mejor.
+    </p>
+    <p>
+        Quiri Allichay surge para acompañar ese camino.
+    </p>
+    <p>
+        La Fundación fue pensada como un espacio donde la capacitación se transforme en oportunidades concretas, donde aprender un oficio pueda significar conseguir trabajo, donde una idea pueda convertirse en un emprendimiento y donde una comunidad organizada pueda encontrar nuevas formas de crecer.
+    </p>
+    <p>
+        Nuestro propósito es acercar conocimientos, generar vínculos, impulsar proyectos sociales, productivos y culturales, promover el empleo y acompañar a quienes necesitan una oportunidad para comenzar nuevamente o avanzar.
+    </p>
+    <p>
+        El nombre Quiri Allichay simboliza precisamente ese espíritu: sanar, mejorar, reparar, reconstruir y volver a ponerse de pie.
+    </p>
+    <p>
+        Desde Tucumán, pero con una mirada puesta en todo el Norte Argentino, queremos construir una institución capaz de unir personas, empresas, organismos públicos y organizaciones sociales y culturales alrededor de un objetivo común: generar oportunidades que produzcan cambios reales y duraderos. 
+    </p>
+    <p>
+        ​Porque creemos que ayudar no es solamente asistir.
+    </p>
+    <p>
+        Es enseñar.
+    </p>
+    <p>
+        Es acompañar.
+    </p>
+    <p>
+        Es abrir puertas.
+    </p>
+    <p>
+        Y, sobre todo, es brindar herramientas para que cada persona pueda construir su propio camino.
+    </p>
+  </div>
+</section>
             <!-- Significado Quechua - Tarjetas de 4 Pilares -->
             <div class="bg-gradient-to-br from-purple-50 via-pink-50 to-white rounded-3xl p-8 md:p-12 mb-16 border border-purple-100 shadow-sm">
                 <div class="text-center max-w-2xl mx-auto mb-10">
@@ -790,6 +818,37 @@ Y, sobre todo, es brindar herramientas para que cada persona pueda construir su 
             alert('Mensaje enviado con éxito. Gracias por contactarte con la Fundación Quiri Allichay.');
             e.target.reset();
         }
+        document.addEventListener("DOMContentLoaded", function () {
+    const textToType = "Nuestra Historia";
+    const typingElement = document.getElementById("typing-title");
+    const historyText = document.getElementById("history-text");
+    let i = 0;
+
+    function typeWriter() {
+      if (i < textToType.length) {
+        typingElement.innerHTML += textToType.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // Velocidad de tipeo (en milisegundos)
+      } else {
+        // Una vez que termina de escribir el título, mostramos el texto largo suavemente
+        setTimeout(() => {
+          historyText.classList.remove("opacity-0", "translate-y-4");
+        }, 300);
+      }
+    }
+
+    // Opcional: Disparar cuando el elemento sea visible en pantalla (Intersection Observer)
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          typeWriter();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(document.getElementById("historia"));
+  });
     </script>
 </body>
 </html>
